@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: linear-gradient(90deg,#f6d365,#fda085);
+    min-width: 100%;
+    color: #fff;
+
+}
+
+.header{
+    font-size: 1.2rem;
+}
+.header,
+form,
+.todo-con{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    background: white;
+    border:none;
+    outline: none;
+    height: 25px;
+    width:  250px;
+    color: #fda085;
+    padding: 5px;
+
+   
+}
+form button{
+    border:none;
+    outline: none;
+    height: 25px;
+    padding: 5px;
+    color: #fda085;
+    background: rgb(255, 255, 255);
+    transition: .3s;
+
+}
+form button:hover{
+    color: #fff;
+    background: #fda085;
+}
+i{
+    pointer-events: none;
+}
+.todo-con {
+    display: flex;
+    flex-direction: column;
+
+}
+.todo-item {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 3fr 0.3fr .3fr;
+    align-items: center;
+}
+
+.todo-item li{
+    list-style-type: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #fda085;
+   display: flex;
+    background: rgb(255, 255, 255);
+    width: 250px;
+    padding: 5px;
+    text-align: left;
+    margin: 0;
+}
+.todo-item .trash , .todo-item .check
+{   padding: 0;
+    margin: 0;
+    height: 30px;
+    width:  30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+.todo-item .trash{
+    background-color: rgb(52, 255, 62);
+}
+.fade{
+    transition: 0.5s;
+    transform: rotateZ(5deg) translatey(100px);
+    opacity: 0;
+}
+.completed{
+    opacity: 0.3;
+}
+.completed li{
+    
+    text-decoration: line-through;
+}
